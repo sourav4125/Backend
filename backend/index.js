@@ -13,7 +13,7 @@ app.use(express.json({ limit: "10mb" }));
 const PORT = process.env.PORT || 8080;
 
 //mongodb connection
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", false );
 
 mongoose
   .connect(process.env.MONGODB_URL)
@@ -21,8 +21,8 @@ mongoose
   .catch((err) => console.log(err));
   app.use("/", route);
 
-app.get("/", (req, res) => {
-  res.send("Server is running");
+app.get("/", (req, res ) => {
+  res.send("Server is running ");
 });
 
 
